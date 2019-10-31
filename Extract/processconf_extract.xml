@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="Windows-31J" standalone="no" ?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+    <bean id="hogepiyo" class="com.salesforce.dataloader.process.ProcessRunner" singleton="false">
+        <description>ここに記載したことがdos窓に表示される</description>
+        <property name="name" value="hogehoge_extract"/>
+        <property name="configOverrideMap">
+            <map>
+                <entry key="sfdc.debugMessages" value="false"/>
+                <entry key="sfdc.endpoint" value="https://servername.salesforce.com"/>
+                <entry key="sfdc.timeoutSecs" value="600"/>
+                <entry key="sfdc.loadBatchSize" value="200"/>
+                <entry key="sfdc.entity" value="hoge"/>
+                <entry key="sfdc.extractionRequestSize" value="2000"/>
+                <entry key="process.operation" value="extract"/>
+                <entry key="dataAccess.type" value="csvWrite"/>
+                <entry key="sfdc.proxyHost" value="proxyproxy"/>
+                <entry key="sfdc.proxyPort" value="####"/>
+                <entry key="sfdc.useBulkApi" value="true"/>
+                <entry key="sfdc.maxRetries" value="10"/>
+                <entry key="process.enableExtractStatusOutput" value="false"/>
+                <entry key="process.outputSuccess" value="successファイルのフルパスなんだけれど、extract のときに使い道ってあるのかな？"/>
+                <entry key="process.outputError" value="errorファイルのフルパスなんだけれど、extract のときに使い道ってあるのかな？"/>
+                <entry key="dataAccess.name" value="出力先のフルパス"/>
+                <entry key="sfdc.extractionSOQL" value="Select ID From hoge"/>
+                <entry key="sfdc.debugMessagesFile" value="C:\DLTest\Log\accountInsertSoapTrace.log"/>
+                <entry key="sfdc.username" value="hoge@piyo.com"/>
+                <entry key="sfdc.password" value="hogepiyohogepiyo"/>
+            </map>
+        </property>
+    </bean>
+</beans>
