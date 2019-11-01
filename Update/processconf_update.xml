@@ -3,7 +3,7 @@
 <beans>
     <bean id="hogepiyo" class="com.salesforce.dataloader.process.ProcessRunner" singleton="false">
         <description>ここに記載したことがdos窓に表示される</description>
-        <property name="name" value="hogehoge_insert"/>
+        <property name="name" value="hogehoge_update"/>
         <property name="configOverrideMap">
             <map>
                 <entry key="sfdc.debugMessages" value="false"/>
@@ -12,7 +12,7 @@
                 <entry key="sfdc.loadBatchSize" value="200"/>
                 <entry key="sfdc.entity" value="hoge"/>
                 <entry key="sfdc.extractionRequestSize" value="2000"/>
-                <entry key="process.operation" value="insert"/>
+                <entry key="process.operation" value="update"/>
                 <entry key="dataAccess.type" value="csvWrite"/>
                 <entry key="sfdc.proxyHost" value="proxyproxy"/>
                 <entry key="sfdc.proxyPort" value="####"/>
